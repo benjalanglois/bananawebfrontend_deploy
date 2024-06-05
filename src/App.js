@@ -1,6 +1,7 @@
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Home from "./components/Home";
+import Tablero from "./components/Tablero";
 import Missing from "./components/Missing";
 //import Unauthorized from "./components/Unauthorized";
 //import Perfil from "./components/Perfil";
@@ -15,6 +16,7 @@ function App() {
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
       <Route path = "home" element={<Home/>}/>
+      <Route path = "tablero" element={<Tablero/>}/>
       {/*<Route path="unauthorized" element={<Unauthorized />} />*/}
 
       {/* Si el usuario se equivoca */}
