@@ -1,58 +1,109 @@
-/* styles.css */
-
-/* General styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-}
-
-/* Header styles */
-.header {
-  background-color: #f8f9fa;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 1px solid #e9ecef;
-}
-
-/* Container styles */
-.container {
-  padding: 20px;
-}
-
-/* Button styles */
-.button {
-  background-color: #007bff;
   color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
-.button:hover {
-  background-color: #0056b3;
-}
-
-/* Login styles */
-.login-container,
-.register-container {
-  width: 300px;
-  margin: 100px auto;
+.header {
+  background-color: rgba(0, 0, 0, 0.7);
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border-bottom: 1px solid #8B4513;
+  position: absolute;
+  width: 100%;
+  top: 0;
 }
 
-.login-container h2,
-.register-container h2 {
+.header h1 {
+  font-family: 'Uncial Antiqua', cursive;
+  font-size: 3em;
+  margin: 0;
+  color: #DAA520;
+}
+
+.landing-page {
+  background-image: url('../assets/hero-image.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-bottom: 20px;
+  padding-top: 100px;
+}
+
+.landing-page .content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.landing-page .buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.landing-page .button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #8B0000;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.landing-page .button:hover {
+  background-color: #660000;
+}
+
+.landing-page .button:active {
+  background-color: #4B0000;
+}
+
+.login-page, .register-page {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding-top: 150px;
+}
+
+.login-page {
+  background-image: url('../assets/login-image.png');
+}
+
+.register-page {
+  background-image: url('../assets/register-image.webp');
+}
+
+.login-content, .register-content {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .form-group {
   margin-bottom: 15px;
+  text-align: left;
 }
 
 .form-group label {
@@ -64,76 +115,21 @@ body {
   width: 100%;
   padding: 8px;
   box-sizing: border-box;
-}
-
-.landing-page {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-.landing-page .content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.landing-page .buttons {
-  margin-top: 20px;
-}
-
-.landing-page .buttons .button {
-  margin: 10px;
-}
-
-.home-container {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-/* Matrix styles */
-.matrix {
-  display: grid;
-  grid-template-columns: repeat(10, 50px);
-  grid-gap: 5px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.matrix-row {
-  display: contents;
-}
-
-.matrix-cell {
-  width: 50px;
-  height: 50px;
   border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.matrix-cell img {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-.controls {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.controls button {
-  margin: 0 10px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
   border-radius: 4px;
-  cursor: pointer;
 }
 
-.controls button:hover {
-  background-color: #0056b3;
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2em;
+  }
+  
+  .landing-page .content, .login-page .login-content, .register-page .register-content {
+      max-width: 90%;
+  }
+
+  .landing-page .button, .login-page .button, .register-page .button {
+      width: 100%;
+      margin: 10px 0;
+  }
 }
-
-
-

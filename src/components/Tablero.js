@@ -1,13 +1,10 @@
-// src/Matrix.js
-
 import React, { useState } from 'react';
-import '../styles/App.css'; // Import the central styles file
+import '../styles/App.css';
 
 const Matrix = () => {
-  // Initialize the matrix with empty values
   const createInitialMatrix = () => {
     const matrix = Array(10).fill(null).map(() => Array(10).fill(false));
-    matrix[9][0] = true; // Initial position at the bottom-left corner
+    matrix[9][0] = true;
     return matrix;
   };
 
