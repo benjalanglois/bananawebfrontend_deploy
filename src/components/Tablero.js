@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/App.css';
+import '../styles/tablero.css';
 
 const Matrix = () => {
   const createInitialMatrix = () => {
@@ -36,20 +36,26 @@ const Matrix = () => {
   };
 
   return (
-    <div>
-      <div className="matrix">
-        {matrix.map((row, rowIndex) => (
-          <div key={rowIndex} className="matrix-row">
-            {row.map((cell, colIndex) => (
-              <div key={colIndex} className="matrix-cell">
-                {cell && <img src="../banana.png" alt="moving" />}
-              </div>
-            ))}
-          </div>
-        ))}
+    <div className="tablero-container">
+      <div className="inventory">
+        <h2>Inventario</h2>
+        {/* Aquí puedes agregar los elementos del inventario */}
       </div>
-      <div className="controls">
-        <button onClick={moveImage}>Move</button>
+      <div className="matrix-container">
+        <div className="matrix">
+          {matrix.map((row, rowIndex) => (
+            <div key={rowIndex} className="matrix-row">
+              {row.map((cell, colIndex) => (
+                <div key={colIndex} className="matrix-cell">
+                  {cell && <img src="../banana.png" alt="moving" />}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+        <div className="controls">
+          <button onClick={moveImage}>Move</button>
+        </div>
       </div>
     </div>
   );
