@@ -39,7 +39,6 @@ const Matrix = () => {
     <div className="tablero-container">
       <div className="inventory">
         <h2>Inventario</h2>
-        {/* Aquí puedes agregar los elementos del inventario */}
       </div>
       <div className="matrix-container">
         <div className="matrix">
