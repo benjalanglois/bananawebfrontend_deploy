@@ -1,37 +1,58 @@
+/* styles/tablero.css */
 
+/* General styles for the container */
 .tablero-container {
     display: flex;
     height: 100vh;
-    background-color: #2C2C2C;
+    background-color: #2C2C2C; /* Gris oscuro para el fondo */
     color: white;
 }
 
+/* Inventory styles */
 .inventory {
     width: 20%;
-    background-color: #1c1c1c;
+    background-color: #1c1c1c; /* Un gris más oscuro para el inventario */
     padding: 20px;
     box-sizing: border-box;
 }
 
 .inventory h2 {
     font-family: 'Uncial Antiqua', cursive;
-    color: #DAA520;
+    color: #DAA520; /* Dorado para el título del inventario */
 }
 
+/* Matrix container styles */
 .matrix-container {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative; /* Para contener el fondo */
 }
 
+.matrix-container::before {
+    content: "";
+    background-image: url('../assets/tablero-image.webp'); /* Ruta de la imagen subida */
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Colocar el fondo detrás de la matriz */
+    opacity: 0.5; /* Ajustar la opacidad para visibilidad */
+}
+
+/* Matrix styles */
 .matrix {
     display: grid;
     grid-template-columns: repeat(10, 50px);
     grid-gap: 5px;
     justify-content: center;
     margin-top: 20px;
+    position: relative; /* Asegurar que esté sobre el fondo */
 }
 
 .matrix-row {
@@ -41,8 +62,8 @@
 .matrix-cell {
     width: 50px;
     height: 50px;
-    background-color: white;
-    border: 1px solid #2C2C2C;
+    background-color: rgba(255, 255, 255, 0.8); /* Casillas blancas transparentes */
+    border: 1px solid #2C2C2C; /* Gris oscuro para las celdas */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,6 +74,7 @@
     max-height: 100%;
 }
 
+/* Controls styles */
 .controls {
     text-align: center;
     margin-top: 20px;
@@ -60,19 +82,19 @@
 
 .controls button {
     padding: 10px 20px;
-    background-color: #8B0000;
+    background-color: #8B0000; /* Rojo Oscuro para el botón */
     color: white;
     border: none;
-    border-radius: 20px;
+    border-radius: 20px; /* Botones redondeados */
     cursor: pointer;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .controls button:hover {
-    background-color: #660000;
+    background-color: #660000; /* Rojo más oscuro en hover */
 }
 
 .controls button:active {
-    background-color: #4B0000;
+    background-color: #4B0000; /* Rojo aún más oscuro en active */
 }
