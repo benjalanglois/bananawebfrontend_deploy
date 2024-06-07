@@ -1,3 +1,4 @@
+/* styles/tablero.css */
 
 .tablero-container {
     display: flex;
@@ -6,6 +7,7 @@
     color: white;
 }
 
+/* Inventory styles */
 .inventory {
     width: 20%;
     background-color: #1c1c1c;
@@ -18,20 +20,44 @@
     color: #DAA520;
 }
 
+/* Matrix container styles */
 .matrix-container {
     width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+.matrix-container::before {
+    content: "";
+    background-image: url('../assets/tablero-image.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 25px;
+}
+
+/* Matrix styles */
 .matrix {
     display: grid;
-    grid-template-columns: repeat(10, 50px);
-    grid-gap: 5px;
-    justify-content: center;
-    margin-top: 20px;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    gap: 1px;
+    width: 100%;
+    height: 100%;
+    max-width: 700px;
+    max-height: 700px;
+    position: relative;
+    z-index: 1;
 }
 
 .matrix-row {
@@ -39,13 +65,11 @@
 }
 
 .matrix-cell {
-    width: 50px;
-    height: 50px;
-    background-color: white;
-    border: 1px solid #2C2C2C;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 1px solid white;
+    box-sizing: border-box;
 }
 
 .matrix-cell img {
@@ -56,6 +80,8 @@
 .controls {
     text-align: center;
     margin-top: 20px;
+    width: 10%;
+    align-items: center;
 }
 
 .controls button {
