@@ -5,9 +5,6 @@ export default axios.create({
   baseURL: BASE_URL,
 });
 
-
-
-
 export const postTirarDados = async () => {
     const LOGIN_URL = '${BASE_URL}/tirardados';
   

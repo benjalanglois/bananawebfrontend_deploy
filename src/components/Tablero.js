@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/tablero.css';
-import { postTirarDados } from './api/axios';
+import { postTirarDados } from "../api/axios";
 
 const Matrix = () => {
   const createInitialMatrix = () => {
@@ -12,9 +12,9 @@ const Matrix = () => {
   const [matrix, setMatrix] = useState(createInitialMatrix);
   const [position, setPosition] = useState({ row: 9, col: 0 });
 
-  const moveImage = () => {
+  const moveImage = async () => {
     let { row, col } = position;
-    col += postTirarDados();
+    col += await postTirarDados();
 
     while (col > 9 && row > 0)  {
       col -= 9;
