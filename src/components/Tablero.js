@@ -4,7 +4,7 @@ import '../styles/tablero.css';
 const Matrix = () => {
   const createInitialMatrix = () => {
     const matrix = Array(10).fill(null).map(() => Array(10).fill(false));
-    matrix[9][0] = true;
+    matrix[9][0] = true; // Posición inicial de la imagen
     return matrix;
   };
 
@@ -22,10 +22,6 @@ const Matrix = () => {
 
     if (row < 0) {
       row = 9;
-    }
-
-    if (row === 0 && col === 9) {
-      alert('SIUUUUUU! Eres la banana ganadora!');
     }
 
     const newMatrix = Array(10).fill(null).map(() => Array(10).fill(false));
@@ -46,16 +42,16 @@ const Matrix = () => {
             <div key={rowIndex} className="matrix-row">
               {row.map((cell, colIndex) => (
                 <div key={colIndex} className="matrix-cell">
-                  {cell && <img src="../banana.png" alt="moving" />}
+                  {cell && <img src="./banana.png" alt="moving" />}
                 </div>
               ))}
             </div>
           ))}
         </div>
-        <div className="controls">
+      </div>
+      <div className="controls">
           <button onClick={moveImage}>Move</button>
         </div>
-      </div>
     </div>
   );
 };
