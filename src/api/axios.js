@@ -16,7 +16,7 @@ export const postTirarDados = async () => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      return response;
+      return response.data.suma;
     } catch (error) {
       return error;
     }
