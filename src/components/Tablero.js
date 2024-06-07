@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/tablero.css';
+import { postTirarDados } from './api/axios';
 
 const Matrix = () => {
   const createInitialMatrix = () => {
@@ -13,10 +14,10 @@ const Matrix = () => {
 
   const moveImage = () => {
     let { row, col } = position;
-    col += 1;
+    col += postTirarDados();
 
-    if (col > 9) {
-      col = 0;
+    while (col > 9 && row > 0)  {
+      col -= 9;
       row -= 1;
     }
 
@@ -24,7 +25,9 @@ const Matrix = () => {
       row = 9;
     }
 
-    if (row === 0 && col === 9) {
+    if (row === 0 && col >= 9) {
+      row = 0;
+      col = 9;
       alert('SIUUUUUU! Eres la banana ganadora!');
     }
 
