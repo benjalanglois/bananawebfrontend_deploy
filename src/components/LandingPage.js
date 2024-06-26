@@ -16,6 +16,8 @@ function LandingPage() {
         <div className="buttons">
           <Link to="/login" className="button">Login</Link>
           <Link to="/register" className="button">Register</Link>
+          <Link to="/about" className="button">About Us</Link>
+          <Link to="/rules" className="button">Reglas del Juego</Link>
         </div>
       </div>
     </div>
