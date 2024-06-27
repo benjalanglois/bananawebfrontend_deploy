@@ -9,7 +9,7 @@ function AboutPage() {
       <div className="content"> {/* Cambia la clase a "content" para usar esos estilos */}
         <h2>¿Como se juega wizzard rush?</h2>
         <p>
-        El juego consiste en cuatro magos representados por bananas, quienes deben llegar a la meta (casilla número 100) tirando el dado. Durante el juego, los magos encontrarán escaleras que los harán avanzar varias casillas, toboganes que los harán retroceder varias casillas, y poderes con los cuales podrán acelerar su avance, retrasar el de sus enemigos y tener duelos contra sus contrincantes.
+        El juego consiste en dos magos representados por bananas, quienes deben llegar a la meta (casilla número 100) tirando el dado. Durante el juego, los magos encontrarán escaleras que los harán avanzar varias casillas, toboganes que los harán retroceder varias casillas, y poderes con los cuales podrán acelerar su avance, retrasar el de sus enemigos y tener duelos contra sus contrincantes.
         </p>
         
       </div>
