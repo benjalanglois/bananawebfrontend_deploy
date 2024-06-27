@@ -3,6 +3,8 @@ import Register from "./components/Register";
 import Home from "./components/Home";
 import Tablero from "./components/Tablero";
 import Missing from "./components/Missing";
+import AboutPage from './components/AboutPage';
+import RulesPage from './components/RulesPage';
 //import Unauthorized from "./components/Unauthorized";
 //import Perfil from "./components/Perfil";
 import { Routes, Route } from "react-router-dom";
@@ -17,6 +19,8 @@ function App() {
       <Route path="register" element={<Register />} />
       <Route path = "home" element={<Home/>}/>
       <Route path = "tablero" element={<Tablero/>}/>
+      <Route path="about" element={<AboutPage/>} />
+      <Route path="rules" element={<RulesPage/>} />
       {/*<Route path="unauthorized" element={<Unauthorized />} />*/}
 
       {/* Si el usuario se equivoca */}
